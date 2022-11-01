@@ -8,6 +8,7 @@ from selenium.webdriver.support import expected_conditions as ec
 def browser():
     print('\nstart browser...')
     options = webdriver.ChromeOptions()
+    options.add_argument("--window-size=1600,1080")
     options.headless = True
     browser = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     yield browser
