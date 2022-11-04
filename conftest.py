@@ -10,8 +10,8 @@ def browser():
     options = webdriver.ChromeOptions()
     options.add_argument("--window-size=1600,1080")
     options.headless = True
-    browser = webdriver.Chrome(service=Service(ChromeDriverManager().install()),
-                               options=options)
+    browser = webdriver.Chrome(service=Service(
+        ChromeDriverManager().install()), options=options)
     yield browser
     print('\nquit browser...')
     browser.quit()
