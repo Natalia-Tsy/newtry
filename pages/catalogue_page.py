@@ -7,10 +7,10 @@ from .base_page import BasePage
 from .locators import BasePageLocators
 from .locators import CartPageLocators
 
+
 class CataloguePage(BasePage):
     def go_to_catalogue(self):
         assert self.element_is_present(*CataloguePageLocators.LINK_TO_PRODUCT_PAGE)
-
 
     def should_be_catalogue_line(self):
         self.browser.find_element(*CataloguePageLocators.CATALOGUE_PAGE_ICON)
@@ -29,7 +29,6 @@ class CataloguePage(BasePage):
 
     def select_all_goods(self):
         self.browser.find_elements(*CartPageLocators.ALL_GOODS)
-
 
     def order_product(self):
         self.browser.find_element(*CataloguePageLocators.PRODUCT_IN_CART).click()

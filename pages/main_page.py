@@ -3,7 +3,6 @@ from .locators import MainPageLocators
 
 
 class MainPage(BasePage):
-
     def should_be_link_to_product_page(self):
         assert self.element_is_present(*MainPageLocators.LINK_TO_PRODUCT_PAGE)
 
@@ -12,6 +11,3 @@ class MainPage(BasePage):
 
     def go_to_login_page(self):
         self.browser.find_element(*MainPageLocators.LOGIN_BTN).click()
-
-
-

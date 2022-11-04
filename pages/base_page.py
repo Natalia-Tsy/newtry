@@ -4,8 +4,8 @@ from .locators import BasePageLocators
 from .locators import CataloguePageLocators
 from .locators import CartPageLocators
 
-class BasePage():
 
+class BasePage:
     def __init__(self, browser, link):
         self.browser = browser
         self.link = link
