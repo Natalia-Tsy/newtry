@@ -9,6 +9,7 @@ link = "http://selenium1py.pythonanywhere.com/ru/"
 
 # Тест проверяет, что пользователь может перейти с главной страницы сайта на страницу с товарами
 
+
 @pytest.mark.smoke
 def test_guest_can_go_to_catalogue(browser):
     # создает экземпляр главной страницы - Main Page
