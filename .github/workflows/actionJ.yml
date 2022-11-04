@@ -37,8 +37,8 @@ jobs:
         run: poetry update
       - name: Run the pytest
         run: poetry run pytest -v
-      - name: Upload artifact
+      - name: Archive code coverage results
         uses: actions/upload-artifact@v3
         with:
-          name: report
-          path: /home/runner/work/Saucedemo_05/Saucedemo_05/report/
+          name: code-coverage-report
+          path: output/test/code-coverage.html
