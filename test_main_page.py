@@ -8,6 +8,7 @@ from .pages.cart_page import CartPage
 link = "http://selenium1py.pythonanywhere.com/ru/"
 
 # Тест проверяет, что пользователь может перейти с главной страницы сайта на страницу с товарами
+
 @pytest.mark.smoke
 def test_guest_can_go_to_catalogue(browser):
     # создает экземпляр главной страницы - Main Page
@@ -48,15 +49,15 @@ def test_user_сan_autorize(browser):
     page.should_be_autorized_user()
 
 
-def test_guest_can_go_to_catalogue(browser):
-    # создает экземпляр главной страницы - Main Page
-    page = MainPage(browser, link)
-    # открывает страницу
-    page.open_page()
-    # проверяет, что на главной странице присутствует ссылка на страницу товаров
-    page.should_be_link_to_product_page()
-    # переходит на страницу с товарами
-    page.go_to_product_page()
+# def test_guest_can_go_to_catalogue(browser):
+#     # создает экземпляр главной страницы - Main Page
+#     page = MainPage(browser, link)
+#     # открывает страницу
+#     page.open_page()
+#     # проверяет, что на главной странице присутствует ссылка на страницу товаров
+#     page.should_be_link_to_product_page()
+#     # переходит на страницу с товарами
+#     page.go_to_product_page()
 
 
 def test_user_can_choose_products(browser):

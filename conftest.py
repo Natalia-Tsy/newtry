@@ -2,9 +2,9 @@ import pytest
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.support import expected_conditions as ec
 
 @pytest.fixture(scope='function')
+
 def browser():
     print('\nstart browser...')
     options = webdriver.ChromeOptions()

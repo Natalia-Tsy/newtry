@@ -1,8 +1,6 @@
 import re
 from selenium.common.exceptions import NoSuchElementException
 from .locators import BasePageLocators
-from .locators import CataloguePageLocators
-from .locators import CartPageLocators
 
 
 class BasePage:

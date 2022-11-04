@@ -1,10 +1,6 @@
-from selenium.webdriver.common.by import By
-import time
-
 from .locators import CataloguePageLocators
-from .locators import CartPageLocators
 from .base_page import BasePage
-from .locators import BasePageLocators
+
 from .locators import CartPageLocators
 
 
@@ -15,8 +11,8 @@ class CataloguePage(BasePage):
     def should_be_catalogue_line(self):
         self.browser.find_element(*CataloguePageLocators.CATALOGUE_PAGE_ICON)
 
-    def go_to_catalogue(self):
-        self.browser.find_element(*CataloguePageLocators.LINK_TO_PRODUCT_PAGE).click()
+    # def go_to_catalogue(self):
+    #     self.browser.find_element(*CataloguePageLocators.LINK_TO_PRODUCT_PAGE).click()
 
     def choose_products(self):
         self.browser.find_element(*CataloguePageLocators.BOOK1).click()
